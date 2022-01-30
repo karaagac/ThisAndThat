@@ -1,0 +1,13 @@
+# Intellij Grey Screen Solution
+
+Open ~/.xinitrc 
+
+and copy that code below 
+exec dwm
+
+export _JAVA_AWT_WM_NONREPARENTING=1 
+export AWT_TOOLKIT=MToolkit 
+wmname LG3D
+
+
+This should fix intellij grey screen problem in DWM.
