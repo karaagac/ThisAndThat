@@ -1,0 +1,20 @@
+# Fix Touchpad tap problem in ArchLinux
+
+## Create an file
+
+sudo vim /etc/X11/xorg.conf.d/30-touchpad.conf
+
+and copy paste:
+
+
+Section "InputClass"
+    Identifier "touchpad"
+   	    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "tapping" "on"
+    Option "AccelProfile" "adaptive"
+    Option "TappingButtonMap" "lrm"
+EndSection
+
+
+Restart dwm and touchpad should work.
