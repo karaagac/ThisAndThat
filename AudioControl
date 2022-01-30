@@ -1,0 +1,7 @@
+# PulseAudio Audio Control from Terminal
+
+## Rise Volume
+pactl set-sink-volume 0 +15%
+
+## Lover Volume
+pactl set-sink-volume 0 -15%
