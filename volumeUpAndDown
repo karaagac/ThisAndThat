@@ -1,0 +1,7 @@
+# Set volume level
+
+## Volume up
+amixer set 'Master' 10%+
+
+## Volume Down
+amixer set 'Master' 10%-
