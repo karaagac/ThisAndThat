@@ -1,6 +1,12 @@
 # Intellij Grey Screen Solution
 
-Open ~/.xinitrc 
+- Install wmname
+sudo pacman -S wmname
+
+run wmname:
+wmname LG3D
+
+- Open ~/.xinitrc 
 
 and copy that code below 
 exec dwm
