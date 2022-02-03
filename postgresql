@@ -1,0 +1,42 @@
+# Postgres SQL 
+
+## Instalation
+https://linuxhint.com/install-postgresql-10-arch-linux/
+
+## Start Service
+sudo systemctl start postgresql
+
+## Check Status
+sudo systemctl start postgresql
+
+## Enable at Startup (if you wanted)
+sudo systemctl enable postgresql
+
+## Using PostgreSQL
+sudo su - postgres
+
+You’re logged in as postgres user.
+
+## Creating a Database:
+createdb employees
+
+## Using a Database
+psql employees
+
+## Executing SQL Command
+SELECT CURRENT_DATE;
+
+## Creating a Table on PostgreSQL: (NOTE: When you create a table create a column for primary key alsi)
+CREATE TABLE users (
+firstname            VARCHAR(20),
+lastname             VARCHAR(20)
+);
+
+## Inserting into the Table
+INSERT INTO users VALUES(‘Shahriar’, ‘Shovon’);
+
+## Select Data
+SELECT * FROM users;
+
+## Create a column for id 
+ALTER TABLE test1 ADD COLUMN id SERIAL PRIMARY KEY;
