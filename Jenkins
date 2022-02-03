@@ -1,0 +1,18 @@
+# Jenkins on ArchLinux
+
+## Installation
+sudo pacman -Syyu jenkins
+
+## Change Default Java
+Change default  to java-8-openjdk/jre using:
+
+sudo archlinux-java set java-8-openjdk/jre
+
+Check: archlinux-java get
+
+## Start Jenkins
+sudo systemctl start jenkins
+
+## Open Jenkins
+http://localhost:8090
+
