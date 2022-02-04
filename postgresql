@@ -3,6 +3,9 @@
 ## Instalation
 https://linuxhint.com/install-postgresql-10-arch-linux/
 
+## PGDATA location
+/var/lib/postgres/data
+
 ## Start Service
 sudo systemctl start postgresql
 
@@ -12,7 +15,7 @@ sudo systemctl start postgresql
 ## Enable at Startup (if you wanted)
 sudo systemctl enable postgresql
 
-## Using PostgreSQL
+## Using PostgreSQL - Connect to postgres
 sudo su - postgres
 
 You’re logged in as postgres user.
@@ -40,3 +43,43 @@ SELECT * FROM users;
 
 ## Create a column for id 
 ALTER TABLE test1 ADD COLUMN id SERIAL PRIMARY KEY;
+
+---
+
+## Configuration in postgreSQL for pgadmin4 connection
+
+### Enable postgres for Remote Connections
+By default postgressql is closed to outside connections. 
+-$PGDATA/postgresql.conf
+listen_address='localhost' to '*' (* means any host)
+- $PGDATA/pg_hba.conf
+host  all all 0.0.0.0/0 md
+
+
+### Establish a connection between client and server
+Check if postgres is running:
+ps -ef | grep postgres
+
+As root go to: cd /var/lib/postgres/data 
+and
+vim postgres.conf
+search
+/liste_address
+change localhost to '*' 
+also uncomment that line.
+---
+vim pg_hba.conf
+at the buttom add a line
+host all  all 0.0.0.0/0 md5
+
+then restart the service
+systemctl restart postgresql
+
+Make sure its listening every ip
+netstat -noa | grep 5432
+
+- Hostname (Server): uname -a / ip address
+- Port number: 5432 (default port number 5432. Check which port postgres is listening: netstat -noa | grep 5432) 
+- Database Name: postgres
+- Username: postgres
+- Password: whatever you assigned
