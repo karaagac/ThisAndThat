@@ -83,3 +83,6 @@ netstat -noa | grep 5432
 - Database Name: postgres
 - Username: postgres
 - Password: whatever you assigned
+
+## Install pgAdmin4
+https://linuxhint.com/install-pgadmin4-manjaro-linux/
