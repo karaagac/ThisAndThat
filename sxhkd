@@ -1,0 +1,17 @@
+# sxhkd
+
+## Installation
+sudo pacman -Syyu sxhkd
+
+## create folders and files
+HOME/sxhkd/sxhkdrc
+
+## Add sxhkd to .xinitrc
+
+vim ~/.xinirc
+exec dwm
+sxhkd &
+
+## Add shortcuts to sxhkdrc file as
+super + p
+  rofi -modi drun -show drun
