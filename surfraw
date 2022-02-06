@@ -1,0 +1,19 @@
+# Surfraw for ArchLinux
+https://ostechnix.com/surfraw-commandline-interface-popular-search-engines-100-websites/
+
+## Install Surfraw
+sudo pacman -Syyu surfraw
+
+## Configure Surfraw
+mkdir ~/.config/surfraw/
+
+sudo vi ~/.config/surfraw/conf
+SURFRAW_graphical_browser=/usr/bin/chromium
+SURFRAW_text_browser=/usr/bin/lynx
+SURFRAW_graphical=yes
+
+## Surfraw elvi`s
+surfraw -elvi
+
+## Search with surfraw
+surfraw google linux
