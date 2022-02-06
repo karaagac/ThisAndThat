@@ -15,20 +15,18 @@ exec dwm
 
 ## Add shortcuts to sxhkdrc file as
 
+
 super + p
 	rofi -modi drun -show drun -font "monospace 13"
- 
-super + r
-	rofi -combi-modi window,drun -show combi -modi combi -font "monospace 13"
 
 super + k
 	chromium --incognito
 
-super + k
+super + c
 	google-chrome-stable
 
 super + i
-	idea
+        wmname LG3D & idea
 
 super + e
 	eclipse
@@ -39,6 +37,9 @@ super + r
 super + w
 	$HOME/scripts/rofi-surfraw-websearch.sh
 
-super + w
+super + b
 	$HOME/scripts/rofi-surfraw-bookmarks.sh
+
+
+
 
